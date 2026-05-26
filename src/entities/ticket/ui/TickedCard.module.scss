@@ -1,0 +1,70 @@
+.ticketCard {
+  border: 1px solid #cccc;
+  border-radius: 6px;
+  width: 502px;
+  height: 140px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.segmentTo,
+.segmentBack {
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+}
+
+.segmentTo {
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+}
+
+.price {
+  // width: 147px;
+  // height: 23px;
+  width: 294px;
+  height: 46px;
+  color: #2196f3;
+  font-weight: bolder;
+}
+
+.direction,
+.number,
+.travel,
+.directionBack,
+.travelBack,
+.numberBack {
+  color: #a0b0b9;
+}
+
+.time,
+.stops,
+.duration,
+.timeBack,
+.stopsBack,
+.durationBack {
+  color: #4a4a4a;
+}
+
+.directionAndtime,
+.travelDuration,
+.numberStops,
+.directionAndtimeBack,
+.travelDurationBack,
+.numberStopsBack {
+  width: 140px;
+  height: 38px;
+}

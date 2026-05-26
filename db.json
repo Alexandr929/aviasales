@@ -1,0 +1,424 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "price": 13400,
+      "carrier": "SU",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "HKT",
+          "date": "2024-05-15T10:45:00",
+          "stops": [],
+          "duration": 780
+        },
+        {
+          "origin": "HKT",
+          "destination": "MOW",
+          "date": "2024-05-22T22:45:00",
+          "stops": ["SVO"],
+          "duration": 900
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "price": 9500,
+      "carrier": "S7",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "LED",
+          "date": "2024-05-16T08:00:00",
+          "stops": [],
+          "duration": 90
+        },
+        {
+          "origin": "LED",
+          "destination": "MOW",
+          "date": "2024-05-18T20:00:00",
+          "stops": [],
+          "duration": 90
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "price": 28400,
+      "carrier": "EK",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "DXB",
+          "date": "2024-06-01T23:50:00",
+          "stops": [],
+          "duration": 300
+        },
+        {
+          "origin": "DXB",
+          "destination": "MOW",
+          "date": "2024-06-08T03:20:00",
+          "stops": ["DME"],
+          "duration": 280
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "price": 5600,
+      "carrier": "FV",
+      "segments": [
+        {
+          "origin": "LED",
+          "destination": "KGD",
+          "date": "2024-05-20T15:30:00",
+          "stops": [],
+          "duration": 120
+        },
+        {
+          "origin": "KGD",
+          "destination": "LED",
+          "date": "2024-05-25T10:00:00",
+          "stops": [],
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "price": 17800,
+      "carrier": "TK",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "IST",
+          "date": "2024-06-10T12:15:00",
+          "stops": [],
+          "duration": 240
+        },
+        {
+          "origin": "IST",
+          "destination": "MOW",
+          "date": "2024-06-17T18:45:00",
+          "stops": ["VKO"],
+          "duration": 260
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "price": 31200,
+      "carrier": "QR",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "DOH",
+          "date": "2024-07-01T08:20:00",
+          "stops": [],
+          "duration": 280
+        },
+        {
+          "origin": "DOH",
+          "destination": "MOW",
+          "date": "2024-07-08T13:40:00",
+          "stops": ["DME", "SVO"],
+          "duration": 310
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "price": 4300,
+      "carrier": "DP",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "AER",
+          "date": "2024-05-25T06:10:00",
+          "stops": [],
+          "duration": 150
+        },
+        {
+          "origin": "AER",
+          "destination": "MOW",
+          "date": "2024-05-30T18:00:00",
+          "stops": [],
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "price": 22300,
+      "carrier": "CA",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "PEK",
+          "date": "2024-07-15T19:30:00",
+          "stops": ["OVB"],
+          "duration": 420
+        },
+        {
+          "origin": "PEK",
+          "destination": "MOW",
+          "date": "2024-07-22T09:15:00",
+          "stops": ["KHV", "OVB"],
+          "duration": 480
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "price": 13400,
+      "carrier": "SU",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "HKT",
+          "date": "2024-05-15T10:45:00",
+          "stops": [],
+          "duration": 780
+        },
+        {
+          "origin": "HKT",
+          "destination": "MOW",
+          "date": "2024-05-22T22:45:00",
+          "stops": ["SVO"],
+          "duration": 900
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "price": 9500,
+      "carrier": "S7",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "LED",
+          "date": "2024-05-16T08:00:00",
+          "stops": [],
+          "duration": 90
+        },
+        {
+          "origin": "LED",
+          "destination": "MOW",
+          "date": "2024-05-18T20:00:00",
+          "stops": [],
+          "duration": 90
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "price": 28400,
+      "carrier": "EK",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "DXB",
+          "date": "2024-06-01T23:50:00",
+          "stops": [],
+          "duration": 300
+        },
+        {
+          "origin": "DXB",
+          "destination": "MOW",
+          "date": "2024-06-08T03:20:00",
+          "stops": ["DME"],
+          "duration": 280
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "price": 5600,
+      "carrier": "FV",
+      "segments": [
+        {
+          "origin": "LED",
+          "destination": "KGD",
+          "date": "2024-05-20T15:30:00",
+          "stops": [],
+          "duration": 120
+        },
+        {
+          "origin": "KGD",
+          "destination": "LED",
+          "date": "2024-05-25T10:00:00",
+          "stops": [],
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "price": 17800,
+      "carrier": "TK",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "IST",
+          "date": "2024-06-10T12:15:00",
+          "stops": [],
+          "duration": 240
+        },
+        {
+          "origin": "IST",
+          "destination": "MOW",
+          "date": "2024-06-17T18:45:00",
+          "stops": ["VKO"],
+          "duration": 260
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "price": 31200,
+      "carrier": "QR",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "DOH",
+          "date": "2024-07-01T08:20:00",
+          "stops": [],
+          "duration": 280
+        },
+        {
+          "origin": "DOH",
+          "destination": "MOW",
+          "date": "2024-07-08T13:40:00",
+          "stops": ["DME", "SVO"],
+          "duration": 310
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "price": 4300,
+      "carrier": "DP",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "AER",
+          "date": "2024-05-25T06:10:00",
+          "stops": [],
+          "duration": 150
+        },
+        {
+          "origin": "AER",
+          "destination": "MOW",
+          "date": "2024-05-30T18:00:00",
+          "stops": [],
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "price": 22300,
+      "carrier": "CA",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "PEK",
+          "date": "2024-07-15T19:30:00",
+          "stops": ["OVB"],
+          "duration": 420
+        },
+        {
+          "origin": "PEK",
+          "destination": "MOW",
+          "date": "2024-07-22T09:15:00",
+          "stops": ["KHV", "OVB"],
+          "duration": 480
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "price": 18900,
+      "carrier": "LH",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "FRA",
+          "date": "2024-08-01T09:00:00",
+          "stops": [],
+          "duration": 210
+        },
+        {
+          "origin": "FRA",
+          "destination": "MOW",
+          "date": "2024-08-08T18:30:00",
+          "stops": [],
+          "duration": 220
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "price": 6700,
+      "carrier": "U6",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "SVX",
+          "date": "2024-06-20T07:15:00",
+          "stops": [],
+          "duration": 130
+        },
+        {
+          "origin": "SVX",
+          "destination": "MOW",
+          "date": "2024-06-25T20:00:00",
+          "stops": [],
+          "duration": 130
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "price": 45700,
+      "carrier": "NH",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "HND",
+          "date": "2024-09-01T11:20:00",
+          "stops": ["LED", "SVO", "DME"],
+          "duration": 750
+        },
+        {
+          "origin": "HND",
+          "destination": "MOW",
+          "date": "2024-09-08T14:10:00",
+          "stops": ["SVO", "LED"],
+          "duration": 720
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "price": 34500,
+      "carrier": "BA",
+      "segments": [
+        {
+          "origin": "MOW",
+          "destination": "LHR",
+          "date": "2024-07-20T13:45:00",
+          "stops": [],
+          "duration": 240
+        },
+        {
+          "origin": "LHR",
+          "destination": "MOW",
+          "date": "2024-07-27T16:20:00",
+          "stops": ["LED"],
+          "duration": 255
+        }
+      ]
+    }
+  ]
+}
