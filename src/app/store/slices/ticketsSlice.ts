@@ -1,5 +1,17 @@
-import { createSlice, type PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
-import { getSearchId, getTickets, addIdsToTicket, type Ticket } from '../../../shared/api/aviasales'
+import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import { addIdsToTicket, getSearchId, getTickets, type Ticket } from '../../../shared/api/aviasales'
+
+type TicketsState = {
+  items: Ticket[]
+  loading: boolean
+  error: string | null
+}
+
+const initialState: TicketsState = {
+  items: [],
+  loading: false,
+  error: null,
+}
 
 export const fetchAllTickets = createAsyncThunk(
   'tickets/fetchAll',
@@ -16,9 +28,9 @@ export const fetchAllTickets = createAsyncThunk(
 
         const ticketsWithIds = addIdsToTicket(tickets)
 
-        dispatch(addTickets(ticketsWithIds))
-
         stop = isStop
+
+        dispatch(addTickets(ticketsWithIds))
       }
       return { success: true }
     } catch (error) {
@@ -26,18 +38,6 @@ export const fetchAllTickets = createAsyncThunk(
     }
   }
 )
-
-type TicketsState = {
-  items: Ticket[]
-  loading: boolean
-  error: string | null
-}
-
-const initialState: TicketsState = {
-  items: [],
-  loading: false,
-  error: null,
-}
 
 const ticketsSlice = createSlice({
   name: 'tickets',

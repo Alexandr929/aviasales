@@ -1,27 +1,34 @@
 .sortTabs {
-  width: 336px;
-  height: 50px;
-  border: 1px solid #cccc;
+  width: fit-content;
+  height: fit-content;
 }
 
 .buttonPrice,
-.buttonDuration {
-  width: 168px;
+.buttonDuration,
+.buttonOptimal {
+  width: 180px;
   height: 50px;
-  border: none;
-  background-color: #ffffff;
+  border: 1px solid #cccc;
+  background-color: $basic-color;
   cursor: pointer;
   &.active {
-    background-color: #2196f3;
+    background-color: $second-basic-color-text;
   }
 }
 
+.buttonDuration {
+  border-left: none;
+  border-right: none;
+}
+
 .cheap,
-.fast {
-  width: 138px;
+.fast,
+.optimal {
+  width: 168px;
   height: 20px;
-  color: #4a4a4a;
+  color: $basic-color-texts;
+
   &.active {
-    color: #ffffff;
+    color: $basic-color;
   }
 }

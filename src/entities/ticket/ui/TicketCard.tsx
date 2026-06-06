@@ -1,4 +1,9 @@
-import styles from './TickedCard.module.scss'
+import { formatDate, formatTimeZoneDiff, getArrivalDate } from '../lib/dateUtils'
+import { formatDuration } from '../lib/durationUtils'
+import { getLocalLogos } from '../lib/logoManager'
+import { priceFormatted } from '../lib/priceUtils'
+import { formatStops } from '../lib/stopsUtils'
+import styles from './TicketCard.module.scss'
 
 interface TickedCardProps {
   ticket: {
@@ -15,55 +20,16 @@ interface TickedCardProps {
 }
 
 export const TicketCard = ({ ticket }: TickedCardProps) => {
-  const priceFormatted = ticket.price.toLocaleString('ru-RU') + ' P'
-
   const segmentTo = ticket.segments[0]
-
   const segmentBack = ticket.segments[1]
 
-  const formatDate = (date: string) => {
-    const formatted = new Date(date)
+  const timeDiffTo = formatTimeZoneDiff(segmentTo.origin, segmentTo.destination)
 
-    return formatted.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
-  }
-
-  const formatDuration = (duration: number) => {
-    const hours = Math.floor(duration / 60)
-    const minutes = duration % 60
-
-    if (minutes === 0) return `${hours}ч`
-
-    return `${hours}ч ${minutes}м`
-  }
-
-  const formatStops = (stops: string[]) => {
-    const count = stops.length
-
-    if (count === 0) return 'Без пересадок'
-
-    if (count === 1) return '1 Пересадка'
-
-    if (count <= 4) return `${count} пересадки`
-
-    return `${count} пересадок`
-  }
-
-  const getArrivalDate = (departureDate: string, duration: number) => {
-    const date = new Date(departureDate)
-
-    date.setMinutes(date.getMinutes() + duration)
-
-    return date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
-  }
   return (
     <div className={styles.ticketCard}>
       <div className={styles.header}>
-        <span className={styles.price}>{priceFormatted}</span>
-        <img
-          src={`//pics.avs.io/99/36/${ticket.carrier}.png`}
-          alt={ticket.carrier}
-          className={styles.logo}
-        />
+        <span className={styles.price}>{priceFormatted(ticket.price)}</span>
+        <img src={getLocalLogos(ticket.carrier)} alt={ticket.carrier} className={styles.logo} />
       </div>
 
       <div className={styles.segmentTo}>
@@ -72,7 +38,8 @@ export const TicketCard = ({ ticket }: TickedCardProps) => {
             {segmentTo.origin} → {segmentTo.destination}
           </div>
           <div className={styles.time}>
-            {formatDate(segmentTo.date)} → {getArrivalDate(segmentTo.date, segmentTo.duration)}
+            {formatDate(segmentTo.date)} → {getArrivalDate(segmentTo.date, segmentTo.duration)}{' '}
+            <span className={styles.diffTimeZone}>{timeDiffTo}ч</span>
           </div>
         </div>
 

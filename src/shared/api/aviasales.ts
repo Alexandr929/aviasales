@@ -1,5 +1,4 @@
 const API_BASE = 'https://aviasales-test-api.kata.academy'
-// const API_BASE = 'http://localhost:3001'
 
 export type Ticket = {
   id?: string
@@ -49,16 +48,8 @@ export const getTickets = async (
   }
 }
 
-const generateId = () => Date.now().toString()
-
 export const addIdsToTicket = (tickets: Ticket[]): Ticket[] => {
-  return tickets.map((ticket) => {
-    return { ...ticket, id: generateId() }
+  return tickets.map((ticket: Ticket) => {
+    return { ...ticket, id: crypto.randomUUID() }
   })
 }
-
-// export const getTickets = async (): Promise<Ticket[]> => {
-// const response = await fetch(`${API_BASE}/tickets`)
-// const data = await response.json()
-// return data
-// }

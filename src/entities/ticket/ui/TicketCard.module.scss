@@ -1,13 +1,12 @@
 .ticketCard {
   border: 1px solid #cccc;
   border-radius: 6px;
-  width: 502px;
-  height: 140px;
+  width: auto;
+  height: auto;
   padding: 20px;
   margin-bottom: 20px;
-  cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: $basic-color;
 }
 
 .header {
@@ -19,7 +18,7 @@
 .segmentTo,
 .segmentBack {
   display: flex;
-  gap: 90px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -33,11 +32,9 @@
 }
 
 .price {
-  // width: 147px;
-  // height: 23px;
   width: 294px;
   height: 46px;
-  color: #2196f3;
+  color: $second-basic-color-text;
   font-weight: bolder;
 }
 
@@ -56,7 +53,7 @@
 .timeBack,
 .stopsBack,
 .durationBack {
-  color: #4a4a4a;
+  color: $basic-color-texts;
 }
 
 .directionAndtime,
@@ -67,4 +64,11 @@
 .numberStopsBack {
   width: 140px;
   height: 38px;
+}
+
+.diffTimeZone {
+  margin-left: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $second-basic-color-text;
 }

@@ -14,9 +14,36 @@ export const TransplantFilter = ({ numberStops, onChange }: TransplantFilterProp
     { value: 3, label: '3 пересадки', stops: [3] },
   ]
 
+  const handleChangeCheckboxs = (value: number | string) => {
+    if (value === 'all') {
+      onChange(numberStops.length === 4 ? [] : [0, 1, 2, 3])
+      return
+    }
+
+    const numberValue = value as number
+
+    let newNumberStops: number[]
+
+    const setNumbers = new Set(numberStops)
+
+    if (setNumbers.has(numberValue)) {
+      newNumberStops = numberStops.filter((number) => number !== numberValue)
+    } else {
+      newNumberStops = [...numberStops, numberValue]
+    }
+
+    if (newNumberStops.length === 4) {
+      onChange([0, 1, 2, 3])
+      return
+    }
+
+    onChange(newNumberStops)
+  }
+
   return (
     <div className={styles.transplantFilter}>
       <h3 className={styles.header}>количество пересадок</h3>
+
       {options.map((option) => (
         <label key={option.value} className={styles.label}>
           <input
@@ -26,18 +53,10 @@ export const TransplantFilter = ({ numberStops, onChange }: TransplantFilterProp
                 ? numberStops.length === 4
                 : numberStops.includes(option.value as number)
             }
-            onChange={() => {
-              if (option.value === 'all') {
-                onChange(numberStops.length === 4 ? [] : [0, 1, 2, 3])
-              } else {
-                const newNumberStops = numberStops.includes(option.value as number)
-                  ? numberStops.filter((number) => number !== option.value)
-                  : [...numberStops, option.value]
-                onChange(newNumberStops as number[])
-              }
-            }}
+            onChange={() => handleChangeCheckboxs(option.value)}
             className={styles.transplantInput}
           />
+
           <span className={styles.transplantInputVariants}>{option.label}</span>
         </label>
       ))}
